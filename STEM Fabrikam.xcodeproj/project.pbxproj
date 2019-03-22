@@ -25,6 +25,7 @@
 		847F9C7C224592940069D60C /* ProfileVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C7B224592940069D60C /* ProfileVC+Views.swift */; };
 		847F9C8522459DD80069D60C /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8322459DD80069D60C /* 1.pdf */; };
 		847F9C8622459DD80069D60C /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8422459DD80069D60C /* 2.pdf */; };
+		847F9C882245A5FC0069D60C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C872245A5FC0069D60C /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		847F9C7B224592940069D60C /* ProfileVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+Views.swift"; sourceTree = "<group>"; };
 		847F9C8322459DD80069D60C /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		847F9C8422459DD80069D60C /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
+		847F9C872245A5FC0069D60C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				847F9C6922458F870069D60C /* UIView.swift */,
+				847F9C872245A5FC0069D60C /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				847F9C6622458F7D0069D60C /* LayoutProxy.swift in Sources */,
 				847F9C74224590D00069D60C /* HomeVC+Views.swift in Sources */,
 				847F9C4C22458B070069D60C /* HomeVC.swift in Sources */,
+				847F9C882245A5FC0069D60C /* UIColor.swift in Sources */,
 				847F9C72224590920069D60C /* ViewController.swift in Sources */,
 				847F9C6722458F7D0069D60C /* LayoutProperty.swift in Sources */,
 				847F9C782245926E0069D60C /* MyCoursesVC+Views.swift in Sources */,

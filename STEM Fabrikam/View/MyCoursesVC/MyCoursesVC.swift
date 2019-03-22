@@ -9,5 +9,7 @@
 import UIKit
 
 class MyCoursesVC: ViewController<MyCoursesViews> {
-    
+    override func handleNavigationController(for controller: UIViewController) {
+        super.handleNavigationController(for: self)
+    }
 }

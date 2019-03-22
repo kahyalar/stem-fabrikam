@@ -9,12 +9,8 @@
 import UIKit
 
 class HomeVC: ViewController<HomeViews> {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func handleNavigationController(for controller: UIViewController) {
+        super.handleNavigationController(for: self)
     }
-
-
 }
 

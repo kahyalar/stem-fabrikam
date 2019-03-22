@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     lazy var homeVC: HomeVC = {
         let vc = HomeVC()
-        vc.tabBarItem = UITabBarItem.init(title: "Ana Sayfa", image: UIImage(named: "homePassive"), selectedImage: UIImage(named: "homeActive"))
+        vc.tabBarItem = UITabBarItem.init(title: "Anasayfa", image: UIImage(named: "homePassive"), selectedImage: UIImage(named: "homeActive"))
         return vc
     }()
     lazy var myCoursesVC: MyCoursesVC = {

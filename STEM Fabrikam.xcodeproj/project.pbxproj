@@ -23,6 +23,8 @@
 		847F9C782245926E0069D60C /* MyCoursesVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C772245926E0069D60C /* MyCoursesVC+Views.swift */; };
 		847F9C7A2245928A0069D60C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C792245928A0069D60C /* ProfileVC.swift */; };
 		847F9C7C224592940069D60C /* ProfileVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C7B224592940069D60C /* ProfileVC+Views.swift */; };
+		847F9C8522459DD80069D60C /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8322459DD80069D60C /* 1.pdf */; };
+		847F9C8622459DD80069D60C /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8422459DD80069D60C /* 2.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		847F9C772245926E0069D60C /* MyCoursesVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCoursesVC+Views.swift"; sourceTree = "<group>"; };
 		847F9C792245928A0069D60C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		847F9C7B224592940069D60C /* ProfileVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+Views.swift"; sourceTree = "<group>"; };
+		847F9C8322459DD80069D60C /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
+		847F9C8422459DD80069D60C /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		847F9C5D22458E940069D60C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				847F9C8222459DC80069D60C /* Elektronik Devre Elemanlarını Tanıyalım */,
 				847F9C4922458B070069D60C /* AppDelegate.swift */,
 				847F9C5022458B080069D60C /* Assets.xcassets */,
 				847F9C5222458B080069D60C /* LaunchScreen.storyboard */,
@@ -169,6 +174,15 @@
 			path = ProfileVC;
 			sourceTree = "<group>";
 		};
+		847F9C8222459DC80069D60C /* Elektronik Devre Elemanlarını Tanıyalım */ = {
+			isa = PBXGroup;
+			children = (
+				847F9C8322459DD80069D60C /* 1.pdf */,
+				847F9C8422459DD80069D60C /* 2.pdf */,
+			);
+			path = "Elektronik Devre Elemanlarını Tanıyalım";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,8 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847F9C8522459DD80069D60C /* 1.pdf in Resources */,
 				847F9C5422458B080069D60C /* LaunchScreen.storyboard in Resources */,
 				847F9C5122458B080069D60C /* Assets.xcassets in Resources */,
+				847F9C8622459DD80069D60C /* 2.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

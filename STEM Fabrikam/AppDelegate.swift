@@ -12,24 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    lazy var homeVC: BasketVC = {
-//        var vc: BasketVC?
-//        vc = checkPremium() ? BasketVC(premium: true) : BasketVC(premium: false)
-//        vc!.tabBarItem = UITabBarItem.init(title: "My Basket", image: #imageLiteral(resourceName: "TabBar-Basket-Unclicked"), selectedImage: #imageLiteral(resourceName: "TabBar-Basket"))
-//        return vc!
-//    }()
-//    lazy var statisticsVC: StatisticsVC = {
-//        var vc: StatisticsVC?
-//        vc = checkPremium() ? StatisticsVC(premium: true) : StatisticsVC(premium: false)
-//        vc!.tabBarItem = UITabBarItem.init(title: "Statistics", image: #imageLiteral(resourceName: "TabBar-Stats-Unclicked"), selectedImage: #imageLiteral(resourceName: "TabBar-Stats"))
-//        return vc!
-//    }()
-//    lazy var premiumVC: UIViewController = {
-//        var vc: UIViewController?
-//        vc = checkPremium() ? PremiumFeaturesVC() : BuyPremiumVC()
-//        vc!.tabBarItem = UITabBarItem.init(title: "Premium", image: #imageLiteral(resourceName: "TabBar-Favorites-Unclicked"), selectedImage: #imageLiteral(resourceName: "TabBar-Favorites"))
-//        return vc!
-//    }()
+    lazy var homeVC: HomeVC = {
+        let vc = HomeVC()
+        vc.tabBarItem = UITabBarItem.init(title: "Ana Sayfa", image: UIImage(named: "homePassive"), selectedImage: UIImage(named: "homeActive"))
+        return vc
+    }()
+    lazy var myCoursesVC: MyCoursesVC = {
+        let vc = MyCoursesVC()
+        vc.tabBarItem = UITabBarItem.init(title: "Kurslarım", image: UIImage(named: "myCoursesPassive"), selectedImage: UIImage(named: "myCoursesActive"))
+        return vc
+    }()
+    lazy var profileVC: ProfileVC = {
+        let vc = ProfileVC()
+        vc.tabBarItem = UITabBarItem.init(title: "Profilim", image: UIImage(named: "menu"), selectedImage: UIImage(named: "menu"))
+        return vc
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -42,13 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func initTabBarController() -> UITabBarController{
         let viewControllers: [UIViewController] = {
-            return [UIViewController(), UIViewController(), UIViewController()]
+            return [homeVC, myCoursesVC, profileVC]
         }()
 
         let tabBarController: UITabBarController = {
             let controller = UITabBarController()
+            controller.tabBar.barTintColor = .red
+            controller.tabBar.tintColor = .white
+            controller.tabBar.unselectedItemTintColor = UIColor(white: 1, alpha: 0.5)
             controller.tabBar.isTranslucent = false
-//            controller.tabBar.tintColor = .estonianBlue
             controller.viewControllers = viewControllers.map { UINavigationController(rootViewController: $0) }
             return controller
         }()

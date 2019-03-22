@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Profile: ViewController<ProfileViews> {
+class ProfileVC: ViewController<ProfileViews> {
     
 }

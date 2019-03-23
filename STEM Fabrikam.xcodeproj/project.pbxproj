@@ -29,6 +29,7 @@
 		847F9C8B2245AD690069D60C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8A2245AD690069D60C /* DataService.swift */; };
 		847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8D2245AE3E0069D60C /* LoginVC.swift */; };
 		847F9C902245AE470069D60C /* LoginVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8F2245AE470069D60C /* LoginVC+Views.swift */; };
+		847F9C932245B99A0069D60C /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C922245B99A0069D60C /* CALayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		847F9C8A2245AD690069D60C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		847F9C8D2245AE3E0069D60C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		847F9C8F2245AE470069D60C /* LoginVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+Views.swift"; sourceTree = "<group>"; };
+		847F9C922245B99A0069D60C /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,7 @@
 		847F9C5D22458E940069D60C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				847F9C8222459DC80069D60C /* Elektronik Devre Elemanlarını Tanıyalım */,
+				847F9C912245B9670069D60C /* Courses */,
 				847F9C4922458B070069D60C /* AppDelegate.swift */,
 				847F9C5022458B080069D60C /* Assets.xcassets */,
 				847F9C5222458B080069D60C /* LaunchScreen.storyboard */,
@@ -145,6 +147,7 @@
 			children = (
 				847F9C6922458F870069D60C /* UIView.swift */,
 				847F9C872245A5FC0069D60C /* UIColor.swift */,
+				847F9C922245B99A0069D60C /* CALayer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +212,14 @@
 				847F9C8F2245AE470069D60C /* LoginVC+Views.swift */,
 			);
 			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		847F9C912245B9670069D60C /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				847F9C8222459DC80069D60C /* Elektronik Devre Elemanlarını Tanıyalım */,
+			);
+			path = Courses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +297,7 @@
 				847F9C70224590710069D60C /* View.swift in Sources */,
 				847F9C6622458F7D0069D60C /* LayoutProxy.swift in Sources */,
 				847F9C74224590D00069D60C /* HomeVC+Views.swift in Sources */,
+				847F9C932245B99A0069D60C /* CALayer.swift in Sources */,
 				847F9C4C22458B070069D60C /* HomeVC.swift in Sources */,
 				847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */,
 				847F9C882245A5FC0069D60C /* UIColor.swift in Sources */,

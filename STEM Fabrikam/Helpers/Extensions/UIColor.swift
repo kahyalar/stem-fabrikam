@@ -15,6 +15,12 @@ extension UIColor {
         }
     }
     
+    open class var lightRed: UIColor {
+        get {
+            return self.init().lightRed()
+        }
+    }
+    
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt32()
@@ -35,5 +41,9 @@ extension UIColor {
     
     func red() -> UIColor {
         return UIColor.init(hexString: "#C9090C")
+    }
+    
+    func lightRed() -> UIColor {
+        return UIColor.init(hexString: "#D74C4E")
     }
 }

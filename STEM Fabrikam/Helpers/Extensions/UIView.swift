@@ -8,6 +8,25 @@
 import UIKit
 
 extension UIView {
+    public var height: CGFloat {
+        get { return frame.size.height }
+    }
+    public var width: CGFloat {
+        get { return frame.size.width }
+    }
+    
+    func underlined(){
+        let width = CGFloat(2.0)
+        let border: CALayer = {
+            let border = CALayer()
+            border.borderColor = UIColor.black.cgColor
+            border.frame = CGRect(x: 0, y: self.height - width, width: self.width, height: self.height)
+            border.borderWidth = width
+            return border
+        }()
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
     
     @available(iOS 9.0, *)
     open var safeTopAnchor: NSLayoutYAxisAnchor {

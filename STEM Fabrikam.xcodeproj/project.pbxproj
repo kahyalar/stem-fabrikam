@@ -11,6 +11,8 @@
 		843794E2224660A70049F693 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843794E1224660A70049F693 /* Course.swift */; };
 		843794EA2246744A0049F693 /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 843794E92246744A0049F693 /* 1.pdf */; };
 		843794EC2246744F0049F693 /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 843794EB2246744F0049F693 /* 2.pdf */; };
+		843794EE224679060049F693 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843794ED224679060049F693 /* CourseCell.swift */; };
+		843794F0224679D70049F693 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843794EF224679D70049F693 /* Cell.swift */; };
 		847F9C4A22458B070069D60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C4922458B070069D60C /* AppDelegate.swift */; };
 		847F9C4C22458B070069D60C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C4B22458B070069D60C /* HomeVC.swift */; };
 		847F9C5122458B080069D60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C5022458B080069D60C /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		843794E1224660A70049F693 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		843794E92246744A0049F693 /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		843794EB2246744F0049F693 /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
+		843794ED224679060049F693 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		843794EF224679D70049F693 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		847F9C4622458B070069D60C /* STEM Fabrikam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STEM Fabrikam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847F9C4922458B070069D60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847F9C4B22458B070069D60C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		847F9C6B22458FD40069D60C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				843794EF224679D70049F693 /* Cell.swift */,
 				847F9C6F224590710069D60C /* View.swift */,
 				847F9C71224590920069D60C /* ViewController.swift */,
 			);
@@ -197,6 +202,7 @@
 			children = (
 				847F9C4B22458B070069D60C /* HomeVC.swift */,
 				847F9C73224590D00069D60C /* HomeVC+Views.swift */,
+				843794ED224679060049F693 /* CourseCell.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847F9C70224590710069D60C /* View.swift in Sources */,
+				843794F0224679D70049F693 /* Cell.swift in Sources */,
 				847F9C6622458F7D0069D60C /* LayoutProxy.swift in Sources */,
 				847F9C74224590D00069D60C /* HomeVC+Views.swift in Sources */,
 				847F9C932245B99A0069D60C /* CALayer.swift in Sources */,
@@ -322,6 +329,7 @@
 				847F9C8B2245AD690069D60C /* DataService.swift in Sources */,
 				847F9C782245926E0069D60C /* MyCoursesVC+Views.swift in Sources */,
 				847F9C6A22458F870069D60C /* UIView.swift in Sources */,
+				843794EE224679060049F693 /* CourseCell.swift in Sources */,
 				847F9C7A2245928A0069D60C /* ProfileVC.swift in Sources */,
 				843794E2224660A70049F693 /* Course.swift in Sources */,
 				847F9C7C224592940069D60C /* ProfileVC+Views.swift in Sources */,

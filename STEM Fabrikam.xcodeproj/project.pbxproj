@@ -26,6 +26,9 @@
 		847F9C8522459DD80069D60C /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8322459DD80069D60C /* 1.pdf */; };
 		847F9C8622459DD80069D60C /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847F9C8422459DD80069D60C /* 2.pdf */; };
 		847F9C882245A5FC0069D60C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C872245A5FC0069D60C /* UIColor.swift */; };
+		847F9C8B2245AD690069D60C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8A2245AD690069D60C /* DataService.swift */; };
+		847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8D2245AE3E0069D60C /* LoginVC.swift */; };
+		847F9C902245AE470069D60C /* LoginVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8F2245AE470069D60C /* LoginVC+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		847F9C8322459DD80069D60C /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		847F9C8422459DD80069D60C /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
 		847F9C872245A5FC0069D60C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		847F9C8A2245AD690069D60C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		847F9C8D2245AE3E0069D60C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		847F9C8F2245AE470069D60C /* LoginVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				847F9C6B22458FD40069D60C /* Base */,
+				847F9C8C2245AE2F0069D60C /* LoginVC */,
 				847F9C6C22458FD90069D60C /* HomeVC */,
 				847F9C6D22458FE40069D60C /* MyCoursesVC */,
 				847F9C6E22458FF50069D60C /* ProfileVC */,
@@ -103,6 +110,7 @@
 		847F9C5C22458E880069D60C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				847F9C892245AD5D0069D60C /* Services */,
 				847F9C6022458F100069D60C /* Extensions */,
 				847F9C5F22458F050069D60C /* SBEasyLayout */,
 			);
@@ -186,6 +194,23 @@
 			path = "Elektronik Devre Elemanlarını Tanıyalım";
 			sourceTree = "<group>";
 		};
+		847F9C892245AD5D0069D60C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				847F9C8A2245AD690069D60C /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		847F9C8C2245AE2F0069D60C /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				847F9C8D2245AE3E0069D60C /* LoginVC.swift */,
+				847F9C8F2245AE470069D60C /* LoginVC+Views.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,9 +287,12 @@
 				847F9C6622458F7D0069D60C /* LayoutProxy.swift in Sources */,
 				847F9C74224590D00069D60C /* HomeVC+Views.swift in Sources */,
 				847F9C4C22458B070069D60C /* HomeVC.swift in Sources */,
+				847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */,
 				847F9C882245A5FC0069D60C /* UIColor.swift in Sources */,
 				847F9C72224590920069D60C /* ViewController.swift in Sources */,
+				847F9C902245AE470069D60C /* LoginVC+Views.swift in Sources */,
 				847F9C6722458F7D0069D60C /* LayoutProperty.swift in Sources */,
+				847F9C8B2245AD690069D60C /* DataService.swift in Sources */,
 				847F9C782245926E0069D60C /* MyCoursesVC+Views.swift in Sources */,
 				847F9C6A22458F870069D60C /* UIView.swift in Sources */,
 				847F9C7A2245928A0069D60C /* ProfileVC.swift in Sources */,

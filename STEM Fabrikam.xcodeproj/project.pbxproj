@@ -36,6 +36,7 @@
 		847F9C932245B99A0069D60C /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C922245B99A0069D60C /* CALayer.swift */; };
 		848C9E092246C781004AD51B /* CourseDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C9E082246C781004AD51B /* CourseDetailsVC.swift */; };
 		848C9E0B2246C792004AD51B /* CourseDetailsVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */; };
+		848C9E0E2246D82E004AD51B /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C9E0D2246D82E004AD51B /* LessonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		847F9C922245B99A0069D60C /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		848C9E082246C781004AD51B /* CourseDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsVC.swift; sourceTree = "<group>"; };
 		848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseDetailsVC+Views.swift"; sourceTree = "<group>"; };
+		848C9E0D2246D82E004AD51B /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		847F9C5B22458CCF0069D60C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				848C9E0C2246D81B004AD51B /* Custom Cells */,
 				847F9C6B22458FD40069D60C /* Base */,
 				847F9C8C2245AE2F0069D60C /* LoginVC */,
 				847F9C6C22458FD90069D60C /* HomeVC */,
@@ -196,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				843794EF224679D70049F693 /* Cell.swift */,
-				843794ED224679060049F693 /* CourseCell.swift */,
 				847F9C6F224590710069D60C /* View.swift */,
 				847F9C71224590920069D60C /* ViewController.swift */,
 			);
@@ -254,6 +256,15 @@
 				848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */,
 			);
 			path = CourseDetailsVC;
+			sourceTree = "<group>";
+		};
+		848C9E0C2246D81B004AD51B /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				843794ED224679060049F693 /* CourseCell.swift */,
+				848C9E0D2246D82E004AD51B /* LessonCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				848C9E0B2246C792004AD51B /* CourseDetailsVC+Views.swift in Sources */,
 				847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */,
 				847F9C882245A5FC0069D60C /* UIColor.swift in Sources */,
+				848C9E0E2246D82E004AD51B /* LessonCell.swift in Sources */,
 				847F9C72224590920069D60C /* ViewController.swift in Sources */,
 				847F9C902245AE470069D60C /* LoginVC+Views.swift in Sources */,
 				847F9C6722458F7D0069D60C /* LayoutProperty.swift in Sources */,

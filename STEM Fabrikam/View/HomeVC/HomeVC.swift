@@ -13,9 +13,5 @@ class HomeVC: ViewController<HomeViews> {
         super.viewDidLoad()
         customView.rootView = self
     }
-    
-    override func handleNavigationController(for controller: UIViewController) {
-        super.handleNavigationController(for: self)
-    }
 }
 

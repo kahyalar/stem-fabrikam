@@ -32,7 +32,7 @@ class CourseCell: Cell {
         addSubview(courseView)
         courseView.layout {
             $0.top == topAnchor
-            $0.bottom == bottomAnchor
+            $0.bottom == safeBottomAnchor
             $0.leading == leadingAnchor
             $0.trailing == trailingAnchor
         }
@@ -65,7 +65,9 @@ class CourseCell: Cell {
     }
     
     func goToCourse() {
-        rootView.navigationController?.pushViewController(CourseDetailsVC(), animated: true)
+        let courseVC = CourseDetailsVC()
+        courseVC.course = course
+        rootView.navigationController?.pushViewController(courseVC, animated: true)
     }
 }
 

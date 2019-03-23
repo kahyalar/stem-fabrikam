@@ -29,7 +29,7 @@ class MyCoursesViews: View {
         addSubview(collectionView)
         collectionView.layout {
             $0.top == safeTopAnchor
-            $0.bottom == bottomAnchor
+            $0.bottom == safeBottomAnchor
             $0.leading == leadingAnchor
             $0.trailing == trailingAnchor
         }
@@ -37,7 +37,7 @@ class MyCoursesViews: View {
         addSubview(noCourseView)
         noCourseView.layout {
             $0.top == safeTopAnchor
-            $0.bottom == bottomAnchor
+            $0.bottom == safeBottomAnchor
             $0.leading == leadingAnchor
             $0.trailing == trailingAnchor
         }
@@ -89,6 +89,7 @@ extension MyCoursesViews: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! CourseCell
+        cell.course = courses[indexPath.row]
         cell.goToCourse()
     }
 }

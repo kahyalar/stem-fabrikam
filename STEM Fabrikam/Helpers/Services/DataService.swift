@@ -22,16 +22,23 @@ class DataService {
     }
     
     func getCourses() -> [Course] {
-        let data = defaults.object(forKey: "courses") as! Data
-        let courses = try! JSONDecoder().decode([Course].self, from: data)
+        guard let data = defaults.object(forKey: "courses") else {
+            return []
+        }
+        let courses = try! JSONDecoder().decode([Course].self, from: data as! Data)
         return courses
     }
     
     func saveCourse(course: Course) {
         var courses = getCourses()
-        for c in courses {
-            if c.id != course.id {
-                courses.append(course)
+        if courses.isEmpty {
+            courses.append(course)
+        }
+        else {
+            for c in courses {
+                if c.id != course.id {
+                    courses.append(course)
+                }
             }
         }
         let data = try! JSONEncoder().encode(courses)

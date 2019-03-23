@@ -10,6 +10,7 @@ import UIKit
 
 class MyCoursesViews: View {
     fileprivate var courses = DataService.shared.getEnrolledCourses()
+    weak var rootView: MyCoursesVC!
     lazy var noCourseView = UIView()
     lazy var noCourseLabel = createLabel(with: "Kurs bulunamadı!")
     lazy var collectionView = UICollectionView(orientation: .horizontal)
@@ -71,8 +72,8 @@ extension MyCoursesViews: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CourseCell
-        cell.titleLabel.text = courses[indexPath.row].title
-        cell.courseButton.setBackgroundImage(UIImage(named: courses[indexPath.row].image), for: .normal)
+        cell.rootView = rootView
+        cell.setCell(for: courses[indexPath.row])
         return cell
     }
     
@@ -87,7 +88,8 @@ extension MyCoursesViews: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat { return UIScreen.main.bounds.width * 0.05 }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let cell = collectionView.cellForItem(at: indexPath) as! CourseCell
+        cell.goToCourse()
     }
 }
 

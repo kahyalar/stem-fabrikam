@@ -10,6 +10,7 @@ import UIKit
 import PDFKit
 
 class HomeViews: View {
+    weak var rootView: HomeVC!
     let courses: [Course] = DataService.shared.getCourses()
     lazy var collectionView = UICollectionView(orientation: .vertical)
     lazy var coursesLabel: UILabel = {
@@ -52,8 +53,8 @@ extension HomeViews: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CourseCell
-        cell.titleLabel.text = courses[indexPath.row].title
-        cell.courseButton.setBackgroundImage(UIImage(named: courses[indexPath.row].image), for: .normal)
+        cell.rootView = rootView
+        cell.setCell(for: courses[indexPath.row])
         return cell
     }
     
@@ -68,7 +69,8 @@ extension HomeViews: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat { return UIScreen.main.bounds.width * 0.05 }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let cell = collectionView.cellForItem(at: indexPath) as! CourseCell
+        cell.goToCourse()
     }
     
     

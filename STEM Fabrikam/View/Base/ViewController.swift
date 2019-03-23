@@ -35,6 +35,8 @@ class ViewController<V: View>: UIViewController {
             navigationController?.visibleViewController?.navigationItem.title = "Kurslarım"
         case is ProfileVC:
             navigationController?.visibleViewController?.navigationItem.title = "Profilim"
+        case is CourseDetailsVC:
+            navigationController?.visibleViewController?.navigationItem.title = "Eğitim Hakkında"
         default:
             navigationController?.visibleViewController?.navigationItem.title = ""
         }

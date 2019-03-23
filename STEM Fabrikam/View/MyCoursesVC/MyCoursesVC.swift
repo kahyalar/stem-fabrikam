@@ -9,6 +9,11 @@
 import UIKit
 
 class MyCoursesVC: ViewController<MyCoursesViews> {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        customView.rootView = self
+    }
+    
     override func handleNavigationController(for controller: UIViewController) {
         super.handleNavigationController(for: self)
     }

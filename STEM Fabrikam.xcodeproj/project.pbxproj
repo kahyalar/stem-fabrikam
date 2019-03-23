@@ -34,6 +34,8 @@
 		847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8D2245AE3E0069D60C /* LoginVC.swift */; };
 		847F9C902245AE470069D60C /* LoginVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C8F2245AE470069D60C /* LoginVC+Views.swift */; };
 		847F9C932245B99A0069D60C /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F9C922245B99A0069D60C /* CALayer.swift */; };
+		848C9E092246C781004AD51B /* CourseDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C9E082246C781004AD51B /* CourseDetailsVC.swift */; };
+		848C9E0B2246C792004AD51B /* CourseDetailsVC+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		847F9C8D2245AE3E0069D60C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		847F9C8F2245AE470069D60C /* LoginVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+Views.swift"; sourceTree = "<group>"; };
 		847F9C922245B99A0069D60C /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		848C9E082246C781004AD51B /* CourseDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsVC.swift; sourceTree = "<group>"; };
+		848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseDetailsVC+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				847F9C6C22458FD90069D60C /* HomeVC */,
 				847F9C6D22458FE40069D60C /* MyCoursesVC */,
 				847F9C6E22458FF50069D60C /* ProfileVC */,
+				848C9E072246C762004AD51B /* CourseDetailsVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				843794EF224679D70049F693 /* Cell.swift */,
+				843794ED224679060049F693 /* CourseCell.swift */,
 				847F9C6F224590710069D60C /* View.swift */,
 				847F9C71224590920069D60C /* ViewController.swift */,
 			);
@@ -202,7 +208,6 @@
 			children = (
 				847F9C4B22458B070069D60C /* HomeVC.swift */,
 				847F9C73224590D00069D60C /* HomeVC+Views.swift */,
-				843794ED224679060049F693 /* CourseCell.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -240,6 +245,15 @@
 				847F9C8F2245AE470069D60C /* LoginVC+Views.swift */,
 			);
 			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		848C9E072246C762004AD51B /* CourseDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				848C9E082246C781004AD51B /* CourseDetailsVC.swift */,
+				848C9E0A2246C792004AD51B /* CourseDetailsVC+Views.swift */,
+			);
+			path = CourseDetailsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +334,7 @@
 				847F9C74224590D00069D60C /* HomeVC+Views.swift in Sources */,
 				847F9C932245B99A0069D60C /* CALayer.swift in Sources */,
 				847F9C4C22458B070069D60C /* HomeVC.swift in Sources */,
+				848C9E0B2246C792004AD51B /* CourseDetailsVC+Views.swift in Sources */,
 				847F9C8E2245AE3E0069D60C /* LoginVC.swift in Sources */,
 				847F9C882245A5FC0069D60C /* UIColor.swift in Sources */,
 				847F9C72224590920069D60C /* ViewController.swift in Sources */,
@@ -330,6 +345,7 @@
 				847F9C782245926E0069D60C /* MyCoursesVC+Views.swift in Sources */,
 				847F9C6A22458F870069D60C /* UIView.swift in Sources */,
 				843794EE224679060049F693 /* CourseCell.swift in Sources */,
+				848C9E092246C781004AD51B /* CourseDetailsVC.swift in Sources */,
 				847F9C7A2245928A0069D60C /* ProfileVC.swift in Sources */,
 				843794E2224660A70049F693 /* Course.swift in Sources */,
 				847F9C7C224592940069D60C /* ProfileVC+Views.swift in Sources */,

@@ -13,6 +13,13 @@ import PDFKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let course = Course(id: "1", title: "Elektronik Devre Elemanlarını Tanıyalım",
+                        image: "Picture1",
+                        playlist: "PLALXza7IgmyuItXM_LM5D4wuelX0hU6Z8",
+                        lessons: [
+                            Lesson(title: "Capacitor'ün 'C'si", video: "TNSbahP-iKc", document: "1"),
+                            Lesson(title: "Diyot'un 'D'si", video: "gFVdO5jk3gI", document: "2")
+                                 ])
     lazy var homeVC: HomeVC = {
         let vc = HomeVC()
         vc.tabBarItem = UITabBarItem.init(title: "Anasayfa", image: UIImage(named: "homePassive"), selectedImage: UIImage(named: "homeActive"))
@@ -30,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        DataService.shared.saveCourse(course: course)
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
             window.rootViewController = DataService.shared.isUserExists() ? initTabBarController() : LoginVC()

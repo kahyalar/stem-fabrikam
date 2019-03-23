@@ -10,14 +10,7 @@ import UIKit
 import PDFKit
 
 class HomeViews: View {
-    var courses: [Course] = []
-    var course = Course(title: "Elektronik Devre Elemanlarını Tanıyalım",
-                        image: "Picture1",
-                        playlist: "https://www.youtube.com/playlist?list=PLALXza7IgmyuItXM_LM5D4wuelX0hU6Z8",
-                        lessons: [
-                                    Lesson(title: "Capacitor'ün 'C'si", video: "https://www.youtube.com/watch?v=TNSbahP-iKc", document: "1"),
-                                    Lesson(title: "Diyot'un 'D'si", video: "https://www.youtube.com/watch?v=gFVdO5jk3gI", document: "2")
-                                 ])
+    let courses: [Course] = DataService.shared.getCourses()
     lazy var collectionView = UICollectionView(orientation: .vertical)
     lazy var coursesLabel: UILabel = {
         let label = UILabel()
@@ -46,7 +39,6 @@ class HomeViews: View {
     }
     
     fileprivate func prepareCollectionViews(){
-        courses.append(course)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CourseCell.self, forCellWithReuseIdentifier: "cellId")
@@ -61,7 +53,7 @@ extension HomeViews: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CourseCell
         cell.titleLabel.text = courses[indexPath.row].title
-        cell.courseButton.setBackgroundImage(courses[indexPath.row].image, for: .normal)
+        cell.courseButton.setBackgroundImage(UIImage(named: courses[indexPath.row].image), for: .normal)
         return cell
     }
     

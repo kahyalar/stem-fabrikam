@@ -24,6 +24,7 @@ class ViewController<V: View>: UIViewController {
     
     func handleNavigationController(for controller: UIViewController) {
         navigationController?.view.backgroundColor = .red
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barTintColor = .red
         navigationController?.navigationBar.backgroundColor = .red
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

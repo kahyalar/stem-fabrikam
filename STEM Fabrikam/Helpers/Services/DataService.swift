@@ -20,4 +20,53 @@ class DataService {
     func setUserInfo(value: Bool) {
         defaults.set(value, forKey: "isUserExists")
     }
+    
+    func getCourses() -> [Course] {
+        let data = defaults.object(forKey: "courses") as! Data
+        let courses = try! JSONDecoder().decode([Course].self, from: data)
+        return courses
+    }
+    
+    func saveCourse(course: Course) {
+        var courses = getCourses()
+        for c in courses {
+            if c.id != course.id {
+                courses.append(course)
+            }
+        }
+        let data = try! JSONEncoder().encode(courses)
+        defaults.set(data, forKey: "courses")
+    }
+    
+    func getCourseIds() -> [String] {
+        guard let array = defaults.stringArray(forKey: "courseId") else {
+            return []
+        }
+        return array
+    }
+    
+    func saveCourseId(id: String) {
+        var ids = getCourseIds()
+        for i in ids {
+            if i != id {
+                ids.append(id)
+            }
+        }
+        defaults.set(ids, forKey: "courseId")
+    }
+    
+    func getEnrolledCourses() -> [Course] {
+        var enrolled: [Course] = []
+        let ids = getCourseIds()
+        let courses = getCourses()
+        for course in courses {
+            for id in ids {
+                if course.id == id {
+                    enrolled.append(course)
+                }
+            }
+        }
+        return enrolled
+    }
+    
 }

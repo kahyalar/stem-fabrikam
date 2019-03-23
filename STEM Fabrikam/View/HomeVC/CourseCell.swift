@@ -60,12 +60,13 @@ class CourseCell: Cell {
 
 private extension CourseCell {
     private func makePretty(){
+        courseButton.layer.borderWidth = 0.5
         courseButton.layer.shadowRadius = 2.0
         courseButton.layer.shadowOpacity = 0.5
         courseButton.layer.masksToBounds = false
         courseButton.layer.shadowColor = UIColor.black.cgColor
+        courseButton.layer.borderColor = UIColor.lightGray.cgColor
         courseButton.subviews.first?.contentMode = .scaleAspectFit
         courseButton.layer.shadowOffset = CGSize(width: 0, height: 3.5)
-        
     }
 }

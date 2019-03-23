@@ -65,8 +65,8 @@ class LoginViews: View {
         emailInput.underlined()
         passwordInput.underlined()
         loginButton.layer.applyShadow()
-        loginButton.layer.cornerRadius = 10
         registerButton.layer.applyShadow()
+        loginButton.layer.cornerRadius = 10
         registerButton.layer.cornerRadius = 10
     }
 }
@@ -78,9 +78,9 @@ private extension LoginViews {
         input.placeholder = text
         input.textAlignment = .center
         input.autocorrectionType = .no
+        input.isSecureTextEntry = secure
         input.keyboardType = .emailAddress
         input.autocapitalizationType = .none
-        input.isSecureTextEntry = secure
         return input
     }
     

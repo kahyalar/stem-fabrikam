@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

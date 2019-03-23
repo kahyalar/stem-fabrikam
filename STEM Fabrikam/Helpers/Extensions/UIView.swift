@@ -30,18 +30,12 @@ extension UIView {
     
     @available(iOS 9.0, *)
     open var safeTopAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.topAnchor
-        }
-        return topAnchor
+        return safeAreaLayoutGuide.topAnchor
     }
     
     @available(iOS 9.0, *)
     open var safeBottomAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.bottomAnchor
-        }
-        return bottomAnchor
+        return safeAreaLayoutGuide.bottomAnchor
     }
 
     open func layout(using closure: (LayoutProxy) -> Void) {

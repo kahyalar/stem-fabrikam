@@ -15,11 +15,11 @@ extension UIView {
         get { return frame.size.width }
     }
     
-    func underlined(){
+    func underlined(color: UIColor = .black){
         let width = CGFloat(2.0)
         let border: CALayer = {
             let border = CALayer()
-            border.borderColor = UIColor.black.cgColor
+            border.borderColor = color.cgColor
             border.frame = CGRect(x: 0, y: self.height - width, width: self.width, height: self.height)
             border.borderWidth = width
             return border

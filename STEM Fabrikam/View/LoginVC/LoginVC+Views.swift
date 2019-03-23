@@ -24,7 +24,7 @@ class LoginViews: View {
             $0.centerX == centerXAnchor
             $0.width == UIScreen.main.bounds.height * 0.3
             $0.height == UIScreen.main.bounds.height * 0.3
-            $0.top == topAnchor + UIScreen.main.bounds.height * 0.075
+            $0.top == topAnchor + UIScreen.main.bounds.height * 0.1
         }
         
         addSubview(emailInput)

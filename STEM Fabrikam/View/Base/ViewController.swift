@@ -28,12 +28,14 @@ class ViewController<V: View>: UIViewController {
         navigationController?.navigationBar.backgroundColor = .red
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         switch controller {
+        case is HomeVC:
+            navigationController?.visibleViewController?.navigationItem.title = "Anasayfa"
         case is MyCoursesVC:
-            navigationItem.title = "Kurslarım"
+            navigationController?.visibleViewController?.navigationItem.title = "Kurslarım"
         case is ProfileVC:
-            navigationItem.title = "Profilim"
+            navigationController?.visibleViewController?.navigationItem.title = "Profilim"
         default:
-            navigationItem.title = "Anasayfa"
+            navigationController?.visibleViewController?.navigationItem.title = ""
         }
     }
     

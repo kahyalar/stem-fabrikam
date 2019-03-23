@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func initTabBarController() -> UITabBarController{
+    func initTabBarController() -> UITabBarController {
         let viewControllers: [UIViewController] = {
             return [homeVC, myCoursesVC, profileVC]
         }()

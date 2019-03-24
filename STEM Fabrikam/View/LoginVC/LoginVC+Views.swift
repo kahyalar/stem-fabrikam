@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViews: View {
+    weak var rootView: LoginVC!
     lazy var logoImage = UIImageView(image: UIImage(named: "logo"))
     lazy var emailInput = createInputFields(with: "Email adresinizi giriniz..", secure: false)
     lazy var passwordInput = createInputFields(with: "Şifrenizi giriniz..", secure: true)
@@ -71,9 +72,17 @@ class LoginViews: View {
     }
 }
 
+extension LoginViews: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        rootView.view.endEditing(true)
+        return false
+    }
+}
+
 private extension LoginViews {
     private func createInputFields(with text: String, secure: Bool) -> UITextField {
         let input = UITextField()
+        input.delegate = self
         input.textColor = .black
         input.placeholder = text
         input.textAlignment = .center

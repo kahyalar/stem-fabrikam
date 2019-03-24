@@ -13,6 +13,7 @@ class LoginVC: ViewController<LoginViews> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customView.rootView = self
         customView.loginButton.addTarget(nil, action: #selector(handleButtonTap), for: .touchUpInside)
         customView.registerButton.addTarget(nil, action: #selector(handleButtonTap), for: .touchUpInside)
     }

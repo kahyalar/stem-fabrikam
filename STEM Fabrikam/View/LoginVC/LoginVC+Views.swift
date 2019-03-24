@@ -12,8 +12,8 @@ class LoginViews: View {
     lazy var logoImage = UIImageView(image: UIImage(named: "logo"))
     lazy var emailInput = createInputFields(with: "Email adresinizi giriniz..", secure: false)
     lazy var passwordInput = createInputFields(with: "Şifrenizi giriniz..", secure: true)
-    lazy var loginButton = createButtons(with: "Giriş Yap")
-    lazy var registerButton = createButtons(with: "Kayıt Ol")
+    lazy var loginButton = createButtons(with: "GİRİŞ YAP")
+    lazy var registerButton = createButtons(with: "KAYIT OL")
     
     override func layoutViews() {
         super.layoutViews()
@@ -88,7 +88,7 @@ private extension LoginViews {
         let button = UIButton()
         button.backgroundColor = .lightRed
         button.titleLabel?.textColor = .white
-        button.setTitle(text.uppercased(with: Locale.current), for: .normal)
+        button.setTitle(text, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return button
     }

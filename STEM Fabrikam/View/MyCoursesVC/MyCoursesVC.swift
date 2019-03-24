@@ -13,4 +13,17 @@ class MyCoursesVC: ViewController<MyCoursesViews> {
         super.viewDidLoad()
         customView.rootView = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshCourseList()
+    }
+}
+
+private extension MyCoursesVC {
+    private func refreshCourseList(){
+        customView.courses = DataService.shared.getEnrolledCourses()
+        customView.hideDefaultViews(isEmpty: customView.courses.isEmpty)
+        customView.collectionView.reloadData()
+    }
 }

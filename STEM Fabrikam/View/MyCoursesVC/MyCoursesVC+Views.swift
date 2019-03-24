@@ -9,7 +9,7 @@
 import UIKit
 
 class MyCoursesViews: View {
-    fileprivate var courses = DataService.shared.getEnrolledCourses()
+    var courses = DataService.shared.getEnrolledCourses()
     weak var rootView: MyCoursesVC!
     lazy var noCourseView = UIView()
     lazy var noCourseLabel = createLabel(with: "Kurs bulunamadı!")
@@ -63,6 +63,10 @@ class MyCoursesViews: View {
         collectionView.dataSource = self
         collectionView.register(CourseCell.self, forCellWithReuseIdentifier: "cellId")
     }
+    
+    func hideDefaultViews(isEmpty: Bool) {
+        noCourseView.isHidden = isEmpty ? false : true
+    }
 }
 
 extension MyCoursesViews: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -101,9 +105,5 @@ private extension MyCoursesViews {
         label.textColor = .red
         label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
         return label
-    }
-    
-    private func hideDefaultViews(isEmpty: Bool) {
-        noCourseView.isHidden = isEmpty ? false : true
     }
 }

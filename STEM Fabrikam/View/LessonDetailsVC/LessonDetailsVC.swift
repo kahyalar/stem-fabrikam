@@ -91,16 +91,6 @@ private extension LessonDetailsVC {
         customView.videoControlsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:))))
     }
     
-    private func fadeOutPlayPauseButton(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            print("run")
-            UIView.animate(withDuration: 0.5, animations: {
-                self.customView.playPauseButton.alpha = 0
-            })
-            self.isPlayPauseButtonDisplaying = false
-        }
-    }
-    
     private func handleUIAfterVideoLoaded(){
         customView.loadingView.stopAnimating()
         customView.videoControlsView.backgroundColor = .clear

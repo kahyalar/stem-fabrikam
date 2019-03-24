@@ -54,9 +54,13 @@ class DataService {
     
     func saveCourseId(id: String) {
         var ids = getCourseIds()
-        for i in ids {
-            if i != id {
-                ids.append(id)
+        if ids.isEmpty {
+            ids.append(id)
+        } else {
+            for i in ids {
+                if i != id {
+                    ids.append(id)
+                }
             }
         }
         defaults.set(ids, forKey: "courseId")

@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         image: "Picture1",
                         playlist: "PLALXza7IgmyuItXM_LM5D4wuelX0hU6Z8",
                         lessons: [
-                            Lesson(title: "Kapasitörleri tanıyalım", video: "https://firebasestorage.googleapis.com/v0/b/stem-fabrikasi.appspot.com/o/1.mp4?alt=media&token=9bc8b1e4-92f4-4e23-890f-e8d6bb838ee5", document: "1"),
-                            Lesson(title: "Diyotları tanıyalım", video: "https://firebasestorage.googleapis.com/v0/b/stem-fabrikasi.appspot.com/o/2.mp4?alt=media&token=22e15002-93f7-49fa-a4cf-950a2c1c777f", document: "2")
+                            Lesson(title: "Kapasitörleri tanıyalım", video: "https://firebasestorage.googleapis.com/v0/b/stem-fabrikasi.appspot.com/o/1.mp4?alt=media&token=ee0449ef-b672-4ef8-9aaf-d8459bb214a3", document: "1"),
+                            Lesson(title: "Diyotları tanıyalım", video: "https://firebasestorage.googleapis.com/v0/b/stem-fabrikasi.appspot.com/o/2.mp4?alt=media&token=4fed07f3-1c46-4fd6-b7ab-14291d95c05f", document: "2")
                                  ])
     lazy var homeVC: HomeVC = {
         let vc = HomeVC()

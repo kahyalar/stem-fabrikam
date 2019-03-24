@@ -61,7 +61,7 @@ struct Lesson: Codable {
     
     init(title: String, video: String, document: String) {
         self.title = title
-        self.video = "https://www.youtube.com/watch?v=\(video)"
-        self.document = Bundle.main.path(forResource: document, ofType: "pdf")!
+        self.video = video
+        self.document = document
     }
 }

@@ -39,6 +39,8 @@ class LessonCell: Cell {
     }
     
     func goToLesson(){
-        rootView.navigationController?.pushViewController(UIViewController(), animated: true)
+        let lessonVC = LessonDetailsVC()
+        lessonVC.lesson = lesson
+        rootView.navigationController?.pushViewController(lessonVC, animated: true)
     }
 }

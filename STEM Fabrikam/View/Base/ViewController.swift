@@ -27,6 +27,7 @@ class ViewController<V: View>: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barTintColor = .red
         navigationController?.navigationBar.backgroundColor = .red
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         switch controller {
         case is HomeVC:
@@ -36,7 +37,7 @@ class ViewController<V: View>: UIViewController {
         case is ProfileVC:
             navigationController?.visibleViewController?.navigationItem.title = "Profilim"
         case is CourseDetailsVC:
-            navigationController?.visibleViewController?.navigationItem.title = "Eğitim Hakkında"
+            navigationController?.visibleViewController?.navigationItem.title = "Eğitim İçeriği"
         default:
             navigationController?.visibleViewController?.navigationItem.title = ""
         }

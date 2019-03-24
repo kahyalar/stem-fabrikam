@@ -11,13 +11,56 @@ import PDFKit
 import AVFoundation
 
 class LessonDetailsVC: ViewController<LessonDetailsViews> {
+    var isPlaying = true
+    var isPlayPauseButtonDisplaying = true
     var lesson: Lesson!
+    var videoPlayer: AVPlayer!
+    
+    deinit {
+        videoPlayer.pause()
+        NotificationCenter.default.removeObserver(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarTitle()
         setVideoPlayer()
+        setVideoControls()
         setPDFFile()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "currentItem.loadedTimeRanges" {
+            handleUIAfterVideoLoaded()
+        }
+    }
+    
+    @objc func tapPlayPauseButton(){
+        if isPlaying {
+            isPlaying = false
+            videoPlayer.pause()
+            customView.playPauseButton.setBackgroundImage(UIImage(named: "play"), for: .normal)
+            
+        } else {
+            isPlaying = true
+            videoPlayer.play()
+            customView.playPauseButton.setBackgroundImage(UIImage(named: "pause"), for: .normal)
+        }
+    }
+    
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        if !isPlayPauseButtonDisplaying {
+            customView.playPauseButton.isHidden = false
+            isPlayPauseButtonDisplaying = true
+        } else {
+            customView.playPauseButton.isHidden = true
+            isPlayPauseButtonDisplaying = false
+        }
+    }
+    
+    @objc func detectFinish(){
+        isPlaying = false
+        customView.playPauseButton.isHidden = false
     }
 }
 
@@ -32,12 +75,34 @@ private extension LessonDetailsVC {
     }
     
     private func setVideoPlayer(){
-//        let videoPlayer = AVPlayer(url: URL(string: lesson.video)!)
-        let videoPlayer = AVPlayer(url: URL(string: "https://firebasestorage.googleapis.com/v0/b/gameofchats-762ca.appspot.com/o/message_movies%2F12323439-9729-4941-BA07-2BAE970967C7.mov?alt=media&token=3e37a093-3bc8-410f-84d3-38332af9c726")!)
+        videoPlayer = AVPlayer(url: URL(string: lesson.video)!)
         let playerLayer = AVPlayerLayer(player: videoPlayer)
         customView.videoView.frame = CGRect(x: 0, y: 0, width: (UIApplication.shared.keyWindow?.frame.width)!, height: (UIApplication.shared.keyWindow?.frame.width)! * (9 / 16))
         customView.videoView.layer.addSublayer(playerLayer)
         playerLayer.frame = customView.videoView.frame
         videoPlayer.play()
+        videoPlayer.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(detectFinish), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    private func setVideoControls(){
+        customView.videoControlsView.frame = CGRect(x: 0, y: 0, width: (UIApplication.shared.keyWindow?.frame.width)!, height: (UIApplication.shared.keyWindow?.frame.width)! * (9 / 16))
+        customView.playPauseButton.addTarget(nil, action: #selector(tapPlayPauseButton), for: .touchUpInside)
+        customView.videoControlsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:))))
+    }
+    
+    private func fadeOutPlayPauseButton(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            print("run")
+            UIView.animate(withDuration: 0.5, animations: {
+                self.customView.playPauseButton.alpha = 0
+            })
+            self.isPlayPauseButtonDisplaying = false
+        }
+    }
+    
+    private func handleUIAfterVideoLoaded(){
+        customView.loadingView.stopAnimating()
+        customView.videoControlsView.backgroundColor = .clear
     }
 }
